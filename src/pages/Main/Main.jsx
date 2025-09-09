@@ -1,0 +1,1 @@
+import CreateTable from "../../features/CreateTable/CreateTable.tsx";import TablesWrapper from "../../widgets/TablesWrapper/TablesWrapper.jsx";function Main() {  return (    <>      <CreateTable />      <TablesWrapper />    </>  )}export default Main
