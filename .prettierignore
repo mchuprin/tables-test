@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+coverage/
+package-lock.json
+yarn.lock
+*.md
+*.json
+*.svg
+*.html
+public/
+.env
+.env.local
