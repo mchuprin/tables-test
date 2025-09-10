@@ -1,12 +1,38 @@
-# React + Vite
+## Tables Mini App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React application demonstrating table creation and rendering with basic state management. Built with Vite, React, Redux Toolkit, TypeScript, and SCSS.
 
-Currently, two official plugins are available:
+### Tech Stack
+- React, React DOM
+- Redux Toolkit, React Redux
+- TypeScript
+- Vite
+- SCSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Getting Started
+1. Install dependencies:
+```bash
+npm install
+```
+2. Start the development server:
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+### Useful Scripts
+- `dev`: Run the app in development mode with Vite.
+- `build`: Create a production build.
+- `preview`: Preview the production build locally.
+- `type-check`: Run TypeScript type checks without emitting files.
+- `lint`: Lint source files.
+- `lint:fix`: Lint and auto-fix issues where possible.
+- `format`: Format files with Prettier.
+- `format:check`: Check formatting without writing changes.
+- `validate`: Run type-check, lint, and formatting checks.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Project Structure (key parts)
+- `src/pages` — pages and routing entry points
+- `src/features` — feature-level logic (e.g., create table)
+- `src/entities` — reusable domain entities (e.g., table UI)
+- `src/widgets` — composed UI blocks
+- `src/app` — app setup, providers, store, and global styles

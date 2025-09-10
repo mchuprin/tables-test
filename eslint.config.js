@@ -129,6 +129,7 @@ export default [
       '*.scss',
       '.env',
       '.env.local',
+      '*.md'
     ],
   },
 ];
