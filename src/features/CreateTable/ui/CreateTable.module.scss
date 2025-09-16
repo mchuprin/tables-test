@@ -1,0 +1,43 @@
+$button-height: 19px;
+
+.trigger {
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+
+    * {
+        width: 100%;
+    }
+
+    &__fieldWrapper {
+        position: relative;
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        bottom: -15px;
+        color: red;
+        font-size: 12px;
+    }
+
+    &__btnSubmit {
+        margin-top: 20px;
+    }
+}
+
+.container {
+    position: relative;
+}
