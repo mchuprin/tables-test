@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
-import { addTable } from '../model/tableSlice';
 import { FieldNames, IFormInputs } from '../model/types';
+import { addTable } from '../silces/slice';
 
 import styles from './CreateTable.module.scss';
 

@@ -1,24 +1,30 @@
 import { useDispatch } from 'react-redux';
 
-import { copyTable, updateCell } from '../../../features/CreateTable/model/tableSlice.ts';
-import { TableData } from '../model/types/index.ts';
+import { TableData } from '../model/types/index';
 
 import styles from './Table.module.scss';
+
+import { copyTable, updateCell } from '@/features/CreateTable/silces/slice';
 
 function Table({ data }: { data: TableData }) {
   const dispatch = useDispatch();
 
   const headerList = data.header.map((title, index) => (
-    <th key={`${title}-${index}`}>
+    <th className={styles.table__header} key={`${title}-${index}`}>
       <span>{title}</span>
       {data.header.length - 1 == index && (
-        <button onClick={() => dispatch(copyTable({ data, id: data.id }))}>Copy</button>
+        <button
+          className={styles.table__button}
+          onClick={() => dispatch(copyTable({ data, id: data.id }))}
+        >
+          <img src='src/shared/ui/icons/copy.svg' alt='Copy' />
+        </button>
       )}
     </th>
   ));
 
   return (
-    <table className={styles.table}>
+    <table>
       <thead>
         <tr>{headerList}</tr>
       </thead>

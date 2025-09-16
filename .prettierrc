@@ -11,5 +11,17 @@
   "jsxSingleQuote": true,
   "bracketSameLine": false,
   "proseWrap": "preserve",
-  "quoteProps": "as-needed"
+  "quoteProps": "as-needed",
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss", "*.less"],
+      "options": {
+        "singleQuote": false,
+        "cssDeclarationSorter": {
+          "order": "smacss",
+          "keepOverrides": true
+        }
+      }
+    }
+  ]
 }

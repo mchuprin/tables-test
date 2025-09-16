@@ -1,1 +1,1 @@
-export type TableData = { id: number; header: string[]; rows: string[][] }[];
+export type TableData = { id: number; header: string[]; rows: string[][] };

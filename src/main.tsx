@@ -2,24 +2,16 @@ import React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { RouterProvider, createBrowserRouter } from 'react-router';
+import { RouterProvider } from 'react-router';
 
 import './app/styles/index.scss';
+import { router } from './app/providers/router';
 import { store } from './app/store/store';
-import Main from './pages/Main/ui/Main.jsx';
 
 const container = document.getElementById('root');
 
 if (container) {
   const root = createRoot(container);
-
-  // TODO: extract router
-  let router = createBrowserRouter([
-    {
-      path: '/',
-      Component: Main,
-    },
-  ]);
 
   root.render(
     <StrictMode>
