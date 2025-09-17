@@ -7,6 +7,7 @@ $button-height: 19px;
 .form {
     display: flex;
     position: absolute;
+    left: 0;
     width: 280px;
     padding: 20px;
     background: #FFF;
@@ -20,6 +21,7 @@ $button-height: 19px;
 
     &__fieldWrapper {
         position: relative;
+        overflow: visible;
 
         &:not(:first-child) {
             margin-top: 20px;
@@ -36,8 +38,4 @@ $button-height: 19px;
     &__btnSubmit {
         margin-top: 20px;
     }
-}
-
-.container {
-    position: relative;
 }

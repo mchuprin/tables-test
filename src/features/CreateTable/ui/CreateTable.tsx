@@ -8,6 +8,8 @@ import { addTable } from '../silces/slice';
 import styles from './CreateTable.module.scss';
 
 function CreateTable() {
+  const [isEnabledModal, setIsEnabledModal] = useState(false);
+
   const toggleModal = () => {
     if (isEnabledModal) {
       reset();
@@ -24,7 +26,6 @@ function CreateTable() {
     },
   });
 
-  const [isEnabledModal, setIsEnabledModal] = useState(false);
   const dispatch = useDispatch();
 
   const onSubmit: SubmitHandler<IFormInputs> = (data: IFormInputs) => {
@@ -35,7 +36,7 @@ function CreateTable() {
   };
 
   return (
-    <div className={styles.container}>
+    <>
       <button className={styles.trigger} onClick={() => toggleModal()}>
         CREATE TABLE
       </button>
@@ -114,7 +115,7 @@ function CreateTable() {
           </button>
         </form>
       )}
-    </div>
+    </>
   );
 }
 
