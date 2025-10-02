@@ -1,10 +1,9 @@
+import { RootState } from '@app/store/store';
+import { TableData } from '@entities/Table/model/types/index';
+import Table from '@entities/Table/ui/Table';
 import { useSelector } from 'react-redux';
 
 import styles from './TablesWrapper.module.scss';
-
-import { RootState } from '@/app/store/store';
-import { TableData } from '@/entities/Table/model/types/index';
-import Table from '@/entities/Table/ui/Table';
 
 function TablesWrapper() {
   const tables = useSelector((state: RootState) => state.tables);

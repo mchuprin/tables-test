@@ -1,9 +1,7 @@
-// tsconfig.json
 {
     "compilerOptions": {
       "target": "ES2020",
       "lib": ["es2017", "dom"],
-      "allowJs": true,
       "skipLibCheck": true,
       "esModuleInterop": true,
       "allowSyntheticDefaultImports": true,
@@ -20,17 +18,16 @@
       "baseUrl": "./src",
       "paths": {
         "@/*": ["*"],
-        "@app/*": ["app/*"],
-        "@pages/*": ["pages/*"],
-        "@widgets/*": ["widgets/*"],
-        "@features/*": ["features/*"],
-        "@entities/*": ["entities/*"],
-        "@shared/*": ["shared/*"]
+        "@app/*": ["./app/*"],
+        "@pages/*": ["./pages/*"],
+        "@widgets/*": ["./widgets/*"],
+        "@features/*": ["./features/*"],
+        "@entities/*": ["./entities/*"],
+        "@shared/*": ["./shared/*"]
       }
     },
     "include": [
-      "src/**/*",
-      "eslint.config.js"
+      "src/**/*"
     ],
     "exclude": [
       "node_modules",

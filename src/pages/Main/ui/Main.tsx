@@ -1,5 +1,5 @@
-import CreateTable from '@/features/CreateTable/ui/CreateTable';
-import TablesWrapper from '@/widgets/TablesWrapper/ui/TablesWrapper';
+import CreateTable from '@features/CreateTable/ui/CreateTable';
+import TablesWrapper from '@widgets/TablesWrapper/ui/TablesWrapper';
 
 function Main() {
   return (

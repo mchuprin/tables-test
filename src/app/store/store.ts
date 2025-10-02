@@ -1,6 +1,5 @@
+import tableReducer from '@features/CreateTable/silces/slice';
 import { configureStore } from '@reduxjs/toolkit';
-
-import tableReducer from '../../features/CreateTable/silces/slice';
 
 export const store = configureStore({
   reducer: {

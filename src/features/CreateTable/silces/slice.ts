@@ -1,6 +1,5 @@
+import { TableData } from '@entities/Table/model/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-import { TableData } from '@/entities/Table/model/types';
 
 const initialState: TableData[] = [];
 
