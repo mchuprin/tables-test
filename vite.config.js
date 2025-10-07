@@ -1,14 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import { visualizer } from "rollup-plugin-visualizer";
 import path from 'path'; 
+import checker from 'vite-plugin-checker'
 
 export default defineConfig({
   build: {
     outDir: "build",
+    // TODO: надо разобраться в этом
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'], // Разделение vendor-чанков
+        },
+      },
+    },
+    minify: 'terser',
   },
   plugins: [
-    react()
+    react(),
+    checker({ typescript: true })
     // visualizer({
     // TODO: разобраться с visualizer
     // }) // должен быть последним
