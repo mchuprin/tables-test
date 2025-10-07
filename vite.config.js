@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { visualizer } from "rollup-plugin-visualizer";
+// import { visualizer } from "rollup-plugin-visualizer";
 import path from 'path'; 
 
 export default defineConfig({
@@ -15,6 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      // alias для кастомных импортов
       '@': path.resolve(__dirname, 'src'),
       "@app": path.resolve(__dirname, 'src/app'),
       "@pages": path.resolve(__dirname, 'src/pages'),

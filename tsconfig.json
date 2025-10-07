@@ -2,21 +2,27 @@
     "compilerOptions": {
       "target": "es2020", // версия, в которую комплилируется TS код
       "lib": ["es2020", "DOM", "DOM.Iterable", "WebWorker"], // типы, которые будет поддерживать компилятор
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
+      "allowJs": true,
+      "skipLibCheck": true, // при сборке не проверяет типы из библиотек
+      "esModuleInterop": true, // обеспечивает совместимость с CommonJS и ES6 модулями, добавляя вспомогательные функции для импорта (изменяет генерируемый код)
+      "allowSyntheticDefaultImports": true, // позволяет импортировать модули без дефолтного экспорта (не изменяет генерируемый код)
       "strict": true, // строгая проверка типов
-      "forceConsistentCasingInFileNames": true,
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
+      "forceConsistentCasingInFileNames": true, // требует, чтобы регистр имени файла совпадал с регистром имени импорта
+      "moduleResolution": "bundler", // стратегия разрешения модулей (определяет как TS будет искать и подключать модули)
+      "resolveJsonModule": true, // позволяет импортировать JSON файлы как модули
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "declarationMap": true,
+      "importsNotUsedAsValues": "remove",
+      "removeComments": true,
       "isolatedModules": true,
-      "noEmit": true,
       "jsx": "react-jsx",
       "module": "ESNext",
-      "declaration": true,
-      "outDir": "./dist",
+      "outDir": "./build-ts",
+      "rootDir": "./src",
       "baseUrl": "./src",
       "paths": {
+        // разрешение кастомных импортов из vite.config (ts будет их понимать)
         "@/*": ["*"],
         "@app/*": ["./app/*"],
         "@pages/*": ["./pages/*"],
@@ -29,9 +35,4 @@
     "include": [
       "src/**/*"
     ],
-    "exclude": [
-      "node_modules",
-      "dist",
-      "build"
-    ]
   }
